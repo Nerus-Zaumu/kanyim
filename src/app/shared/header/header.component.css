@@ -1,0 +1,94 @@
+mat-toolbar{
+  width: 100%;
+  height: 100px;
+  background-color: var(--primaryColor);
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-toolbar > div{
+  height: 100%;
+}
+
+.brand, .person-avatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand{
+  width: 10%;
+}
+
+.box img{
+  width: 90%;
+  height: 90%;
+}
+
+.brand img{
+  object-fit: contain;
+}
+
+.nav-list{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+mat-nav-list mat-list-item a{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.person-avatar img{
+  object-fit: contain;
+}
+
+.person-avatar{
+  width: 10%;
+}
+
+@media(max-width: 910px){
+  .box img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand img, .person-avatar img{
+    object-fit: fill;
+  }
+}
+
+@media(max-width: 472px){
+  .nav-list{
+    display: none;
+  }
+
+  mat-toolbar{
+    justify-content: space-between;
+  }
+
+  mat-toolbar > div{
+    width: 25%;
+  }
+}
+
+
+@media(min-width: 472px){
+  .hideDropdownEl{
+   display: none;
+  }
+}
+
+

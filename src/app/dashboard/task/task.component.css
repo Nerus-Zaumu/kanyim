@@ -1,0 +1,10 @@
+form{
+  width: 100%;
+  height: fit-content;
+}
+
+
+mat-form-field{
+  width: 90%;
+  margin: auto;
+}

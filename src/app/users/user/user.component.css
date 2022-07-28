@@ -1,0 +1,116 @@
+.login-signup{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .container, .container > *{
+  border: 5px solid green;
+} */
+
+.container > .content{
+  width: 60%;
+  margin: auto;
+}
+
+.container .header{
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand{
+  width: 10%;
+}
+
+.title{
+  width: 90%;
+  text-align: center;
+}
+
+.container .content{
+  height: 600px;
+  background-image: linear-gradient(134.62deg, #1C125B 0.88%, rgba(28, 18, 91, 0.64) 97.65%);
+  border-radius: 16px;
+  box-shadow: 2px 2px 2px 2px #fff;
+}
+
+@media(max-width: 900px){
+  .container .content{
+    width: 90%;
+  }
+}
+
+@media(max-width: 600px){
+  .container .content{
+    width: 100%;
+    /* height: 100%; */
+  }
+}
+
+form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.btns{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns button{
+  width: 150px;
+  margin-bottom: 16px;
+}
+
+mat-form-field{
+  width: 70%;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+
+@media(max-width: 650px){
+  mat-form-field{
+    width: 90%;
+  }
+}

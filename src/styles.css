@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+:root{
+  --primaryColor: #0B0240;
+  --userGradientStart: #ffffff;
+  --userGradientEnd: #BC9D9D;
+  --userButtonStart: #1C125B;
+  --userButtonEnd: #31247C;
+  --currentlyActiveLink: #E2CBCB;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.transparent{
+  background-color: transparent;
+  color: white;
+}
+
+.auth-btn{
+  background-image: linear-gradient(to left, var(--userButtonStart), var(--userButtonEnd));
+  color: white;
+}
+
+.active{
+  color: var(--currentlyActiveLink);
+}
+
+.dropdownItemColor{
+  color: var(--primaryColor);
+}
+
+/* Rectangle 48 */
+
+

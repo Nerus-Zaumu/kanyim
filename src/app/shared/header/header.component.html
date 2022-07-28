@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <div class="brand box">
+    <img src="assets/icons/logo.svg">
+  </div>
+  <div class="nav-list">
+    <mat-nav-list>
+      <mat-list-item>
+        <a routerLink="#" routerLinkActive="active">HOME</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="#" routerLinkActive="active">BACKLOG</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="#" routerLinkActive="active">CREATE</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="#" routerLinkActive="active">MANAGE</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+  <div class="person-avatar box">
+    <img src="assets/images/person_avatar.svg"  [matMenuTriggerFor]="menu">
+    <mat-menu #menu>
+      <mat-list>
+        <mat-list-item>
+          <img src="assets/images/person_avatar.svg">
+          <mat-label>Yimnai</mat-label>
+        </mat-list-item>
+        <div ngClass="hideDropdownEl">
+          <mat-list-item>
+            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">HOME</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">BACKLOG</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">CREATE</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">MANAGE</a>
+          </mat-list-item>
+        </div>
+        <mat-list-item>
+          <a href="#" ngClass="dropdownItemColor">LOGOUT</a>
+          <mat-icon matSuffix ngClass="dropdownItemColor">logout</mat-icon>
+        </mat-list-item>
+      </mat-list>
+    </mat-menu>
+  </div>
+</mat-toolbar>
