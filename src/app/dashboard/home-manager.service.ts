@@ -519,7 +519,11 @@ export class HomeManagerService {
     }
   ]
 
-  newData: Task[] = []
+  newTasks: Task[] = this.data
+
+  tasksInProgress: Task[] = []
+
+  completedTasks: Task[] = []
 
   singleTaskForm: FormGroup = new FormGroup({
     taskID: new FormControl(),

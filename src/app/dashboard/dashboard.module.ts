@@ -11,6 +11,8 @@ import { ManageComponent } from './manage/manage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SplicerPipe } from './pipes/splicer.pipe';
 import { TaskComponent } from './task/task.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BacklogSplicerPipe } from './pipes/backlog-splicer.pipe'
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { TaskComponent } from './task/task.component';
     DashboardComponent,
     TaskComponent,
     SplicerPipe,
+    BacklogSplicerPipe,
   ],
   imports: [
     DashboarRoutingModule,
@@ -30,6 +33,7 @@ import { TaskComponent } from './task/task.component';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule
   ],
   exports: [DashboardComponent],
 

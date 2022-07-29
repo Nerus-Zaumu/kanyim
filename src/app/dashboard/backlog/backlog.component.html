@@ -1,1 +1,59 @@
-<p>backlog works!</p>
+<div class="container">
+  <div class="header">
+    <h1>Backlog Container for Task Management</h1>
+  </div>
+  <mat-grid-list [cols]="cols" [rowHeight]="rowHeight" gutterSize="20px">
+    <mat-grid-tile class="mat-elevation-z8">
+     <div class="holder">
+      <div class="header">
+        <mat-label>NEW</mat-label>
+      </div>
+      <div class="content"
+      cdkDropList
+      #newList = "cdkDropList"
+      [cdkDropListData]="homeManagerService.newTasks"
+      [cdkDropListConnectedTo]="[progressList, completedList]"
+      (cdkDropListDropped)="drop($event)">
+        <div class="item"  *ngFor="let task of homeManagerService.newTasks" cdkDrag>
+          <p>{{ task.taskDescription | backlogSplicer }}</p>
+        </div>
+      </div>
+     </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="mat-elevation-z8">
+      <div class="holder">
+        <div class="header">
+          <mat-label>IN PROGRESS</mat-label>
+        </div>
+        <div class="content" cdkDropList
+         #progressList="cdkDropList"
+         [cdkDropListData]="homeManagerService.tasksInProgress"
+         [cdkDropListConnectedTo]="[newList, completedList]"
+         (cdkDropListDropped)="drop($event)"
+         >
+         <div class="item" *ngFor="let task of homeManagerService.tasksInProgress" cdkDrag>
+            <p>{{ task.taskDescription | backlogSplicer }}</p>
+         </div>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="mat-elevation-z8">
+      <div class="holder">
+        <div class="header">
+          <mat-label>COMPLETED</mat-label>
+        </div>
+        <div class="content"
+        cdkDropList
+        #completedList="cdkDropList"
+        [cdkDropListData]="homeManagerService.completedTasks"
+        [cdkDropListConnectedTo]="[newList, progressList]"
+        (cdkDropListDropped)="drop($event)"
+        >
+        <div class="item" *ngFor="let task of homeManagerService.completedTasks" cdkDrag>
+          {{ task.taskDescription | backlogSplicer }}
+        </div>
+      </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -32,12 +32,6 @@ mat-form-field{
   border-radius: 10px;
 }
 
-.btn{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 button{
   height: 60px;

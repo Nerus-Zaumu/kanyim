@@ -1,3 +1,4 @@
+import { BacklogComponent } from './backlog/backlog.component';
 import { CreateComponent } from './create/create.component';
 import { ManageComponent } from './manage/manage.component';
 import { TaskComponent } from './task/task.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
     {path: ':id', component: TaskComponent}
   ]},
   {path: 'manage', component: ManageComponent},
-  {path: 'create', component: CreateComponent}
+  {path: 'create', component: CreateComponent},
+  {path: 'backlog', component: BacklogComponent}
 ]
 
 @NgModule({

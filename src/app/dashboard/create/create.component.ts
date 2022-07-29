@@ -1,3 +1,4 @@
+import { HomeManagerService } from './../home-manager.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(public homeManagerService: HomeManagerService) { }
 
   ngOnInit(): void {
   }
