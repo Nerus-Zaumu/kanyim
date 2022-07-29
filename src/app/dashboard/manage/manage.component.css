@@ -1,0 +1,51 @@
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+mat-grid-list{
+  width: 100%;
+}
+
+h1{
+  color: white;
+  font-weight: bolder;
+  font-family: sans-serif;
+  margin-bottom: 5%;
+}
+
+form{
+  text-align: center;
+}
+
+mat-grid-tile{
+  background-color: var(--primaryColor);
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+mat-form-field{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: white;
+  margin-bottom: 8%;
+  border-radius: 10px;
+}
+
+.btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  height: 60px;
+  color: var(--primaryColor);
+  font-family: sans-serif;
+}
+
+mat-icon{
+  color: var(--primaryColor);
+}
+

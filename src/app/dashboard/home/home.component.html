@@ -43,7 +43,7 @@
       <td mat-cell *matCellDef="let task"> {{task.taskStatus}} </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="homeManagerService.displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: homeManagerService.displayedColumns; let task" [ngClass]="{'row': true}" (click)="homeManagerService.openDialog()" [routerLink]="task.taskID"></tr>
+    <tr mat-row *matRowDef="let row; columns: homeManagerService.displayedColumns; let task" [ngClass]="{'row': true}" (click)="homeManagerService.openDialog(task.taskID)"></tr>
   </table>
   <mat-paginator
             [length]="this.homeManagerService.data.length"

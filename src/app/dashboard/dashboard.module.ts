@@ -1,6 +1,6 @@
+import { DashboarRoutingModule } from './dashboard-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './../shared/shared.module';
-import { DashboarRoutingModule } from './dashboar-routing.module';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,18 +20,18 @@ import { TaskComponent } from './task/task.component';
     CreateComponent,
     ManageComponent,
     DashboardComponent,
+    TaskComponent,
     SplicerPipe,
-    TaskComponent
   ],
   imports: [
+    DashboarRoutingModule,
     CommonModule,
     MaterialModule,
-    DashboarRoutingModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
   ],
   exports: [DashboardComponent],
-  
+
 })
 export class DashboardModule { }

@@ -1,3 +1,7 @@
+mat-dialog-content{
+  height: fit-content;
+}
+
 form{
   width: 100%;
   height: fit-content;
@@ -6,5 +10,31 @@ form{
 
 mat-form-field{
   width: 90%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  border: 2px solid var(--userButtonEnd);
+  border-radius: 10px;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+mat-icon{
+  color: var(--userButtonEnd);
+  font-size: 2rem;
+}
+
+.btnColor{
+  color: white;
+  font-family: sans-serif;
+  background-color: var(--userButtonEnd);
 }

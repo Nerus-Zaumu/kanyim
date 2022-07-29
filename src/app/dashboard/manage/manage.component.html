@@ -1,1 +1,69 @@
-<p>manage works!</p>
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight">
+  <mat-grid-tile>
+    <form [formGroup]="dataManagerService.signupForm">
+      <h1 class="display-1">PROFILE</h1>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>@johndoe</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="username"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>johndoe@gmail.com</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="email"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>@password</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="password"
+          [type]=" passwordState ? 'text' : 'password'"
+        >
+        <mat-icon matSuffix (click)="togglePasswordVisibility()" *ngIf="!passwordState">visibility_off</mat-icon>
+        <mat-icon matSuffix (click)="togglePasswordVisibility()" *ngIf="passwordState">visibility</mat-icon>
+      </mat-form-field>
+      <div class="btn">
+        <button mat-raised-button>Update Profile</button>
+      </div>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <form [formGroup]="homeManagerService.boardForm">
+      <h1>BOARD</h1>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>@new task name</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="startTaskName"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>@task in progress name</mat-label>
+        <input
+         type="text"
+         matInput
+         formControlName="taskInProgress"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>@completed task name</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="completedTask"
+        >
+      </mat-form-field>
+      <div class="btn">
+        <button mat-raised-button>Update Board Names</button>
+      </div>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>
