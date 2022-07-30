@@ -23,7 +23,7 @@
             <mat-icon matSuffix (click)="togglePasswordVisibility()" *ngIf="passwordState">visibility</mat-icon>
           </mat-form-field>
          <div class="btns">
-          <button mat-raised-button ngClass="auth-btn">SIGNUP</button>
+          <button mat-raised-button ngClass="auth-btn" (click)="dataManagerService.signup()">SIGNUP</button>
           <button mat-raised-button ngClass="transparent" (click)="dataManagerService.switchBetweenLoginAndSignup()">LOGIN INSTEAD?</button>
          </div>
         </div>
@@ -51,7 +51,7 @@
             <mat-icon matSuffix (click)="togglePasswordVisibility()" *ngIf="passwordState">visibility</mat-icon>
           </mat-form-field>
          <div class="btns">
-          <button mat-raised-button ngClass="auth-btn">LOGIN</button>
+          <button mat-raised-button ngClass="auth-btn" [routerLink]="['', 'users', 'dashboard', 'home']">LOGIN</button>
           <button mat-raised-button ngClass="transparent" (click)="dataManagerService.switchBetweenLoginAndSignup()">SIGNUP INSTEAD?</button>
          </div>
         </div>

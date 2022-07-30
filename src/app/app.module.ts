@@ -1,5 +1,4 @@
 import { DashboardModule } from './dashboard/dashboard.module';
-import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,12 +14,11 @@ import { LayoutModule } from '@angular/cdk/layout';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
+    LayoutModule,
     UsersModule,
-    SharedModule,
     DashboardModule,
-    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

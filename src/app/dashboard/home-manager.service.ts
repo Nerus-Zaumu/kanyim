@@ -549,7 +549,7 @@ export class HomeManagerService {
   }
 
   openDialog(taskID: string): void {
-    this.router.navigate(['users/dashboard/home',taskID])
+    this.router.navigate(['users/dashboard/home', taskID])
     const dialogRef = this.dialog.open(TaskComponent, {
       width: '50%',
       data: {route: this.activatedRoute}
@@ -565,10 +565,6 @@ export class HomeManagerService {
       {return task.taskID === taskID}
     });
   }
-}
-
-function saveAs(myFile: File) {
-  throw new Error('Function not implemented.');
 }
 
 

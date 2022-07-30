@@ -29,7 +29,7 @@ body {
 }
 
 .active{
-  color: var(--currentlyActiveLink);
+  color: var(--currentlyActiveLink) !important;
 }
 
 .dropdownItemColor{

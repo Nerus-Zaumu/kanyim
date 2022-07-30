@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -7,6 +8,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class DataManagerService {
 
   loginSignupState = false;
+
+  userSystemEntryType = 'login';
 
   signupForm: FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required]),
@@ -28,10 +31,17 @@ export class DataManagerService {
     confirmPassword: new FormControl('', [Validators.required, Validators.minLength(8)])
   })
 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+
   switchBetweenLoginAndSignup(){
+    this.loginSignupState = !this.loginSignupState
+    this.loginSignupState ? this.userSystemEntryType = 'register' : this.userSystemEntryType = 'login'
+    this.router.navigate([`users/auth/${this.userSystemEntryType}`])
+  }
+
+  signup(){
     this.loginSignupState = !this.loginSignupState
   }
 
 
-  constructor() { }
 }

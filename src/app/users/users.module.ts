@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { UsersComponent } from './users/users.component';
+import { UsersComponent } from './users.component';
 
 
 
@@ -25,7 +25,7 @@ import { UsersComponent } from './users/users.component';
     UserRoutingModule
   ],
   exports: [
-    UserComponent
+    // UserComponent
   ]
 })
 export class UsersModule { }

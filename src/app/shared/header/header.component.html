@@ -4,17 +4,17 @@
   </div>
   <div class="nav-list">
     <mat-nav-list>
-      <mat-list-item>
-        <a routerLink="users/dashboard/home" routerLinkActive="active">HOME</a>
+      <mat-list-item [routerLink]="['', 'users', 'dashboard', 'home']">
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
       </mat-list-item>
-      <mat-list-item>
-        <a routerLink="#" routerLinkActive="active">BACKLOG</a>
+      <mat-list-item [routerLink]="['', 'users', 'dashboard', 'backlog']">
+        <a  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">BACKLOG</a>
       </mat-list-item>
-      <mat-list-item>
-        <a routerLink="#" routerLinkActive="active">CREATE</a>
+      <mat-list-item [routerLink]="['', 'users', 'dashboard', 'create']">
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">CREATE</a>
       </mat-list-item>
-      <mat-list-item>
-        <a routerLink="users/dashboard/manage" routerLinkActive="active">MANAGE</a>
+      <mat-list-item [routerLink]="['', 'users', 'dashboard', 'manage']">
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">MANAGE</a>
       </mat-list-item>
     </mat-nav-list>
   </div>
@@ -28,20 +28,20 @@
         </mat-list-item>
         <div ngClass="hideDropdownEl">
           <mat-list-item>
-            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">HOME</a>
+            <a [routerLink]="['', 'users', 'dashboard', 'home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ngClass="dropdownItemColor">HOME</a>
           </mat-list-item>
           <mat-list-item>
-            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">BACKLOG</a>
+            <a [routerLink]="['', 'users', 'dashboard', 'backlog']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ngClass="dropdownItemColor">BACKLOG</a>
           </mat-list-item>
           <mat-list-item>
-            <a routerLink="#" routerLinkActive="active" ngClass="dropdownItemColor">CREATE</a>
+            <a [routerLink]="['', 'users', 'dashboard', 'create']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ngClass="dropdownItemColor">CREATE</a>
           </mat-list-item>
           <mat-list-item>
-            <a routerLink="/dashboard/manage" routerLinkActive="active" ngClass="dropdownItemColor">MANAGE</a>
+            <a [routerLink]="['', 'users', 'dashboard', 'manage']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ngClass="dropdownItemColor">MANAGE</a>
           </mat-list-item>
         </div>
         <mat-list-item>
-          <a href="#" ngClass="dropdownItemColor">LOGOUT</a>
+          <a [routerLink]="['', 'users', 'auth', 'login']" ngClass="dropdownItemColor">LOGOUT</a>
           <mat-icon matSuffix ngClass="dropdownItemColor">logout</mat-icon>
         </mat-list-item>
       </mat-list>

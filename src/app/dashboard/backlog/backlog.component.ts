@@ -43,12 +43,6 @@ export class BacklogComponent implements OnInit {
     })
   }
 
-  // dragData(currentDescription: string){
-  //   return this.homeManagerService.newTasks.find(task => {
-  //     {return task.taskDescription == currentDescription}
-  //   })
-  // }
-
   drop(event: CdkDragDrop<Task[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);

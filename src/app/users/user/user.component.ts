@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { DataManagerService } from './../data-manager.service';
 import { Component, OnInit } from '@angular/core';
 

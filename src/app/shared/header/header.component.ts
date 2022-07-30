@@ -1,4 +1,3 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,15 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  // breakpoints = [Breakpoints.HandsetPortrait,
-  //    Breakpoints.HandsetLandscape,
-  //   Breakpoints.TabletLandscape,
-  //   Breakpoints.TabletPortrait
-  // ];
-
-  breakpointState = false;
-
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor() {
 
    }
 

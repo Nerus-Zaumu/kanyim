@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { CreateComponent } from './create/create.component';
 import { ManageComponent } from './manage/manage.component';
@@ -7,12 +8,14 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent, children: [
-    {path: ':id', component: TaskComponent}
-  ]},
-  {path: 'manage', component: ManageComponent},
-  {path: 'create', component: CreateComponent},
-  {path: 'backlog', component: BacklogComponent}
+   {path: '', component: DashboardComponent, children: [
+    {path: 'home', component: HomeComponent, children: [
+      {path: ':id', component: TaskComponent},
+    ]},
+    {path: 'manage', component: ManageComponent},
+    {path: 'create', component: CreateComponent},
+    {path: 'backlog', component: BacklogComponent}
+   ]}
 ]
 
 @NgModule({
