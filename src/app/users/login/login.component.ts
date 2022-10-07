@@ -1,17 +1,16 @@
-import { Router, ActivatedRoute } from '@angular/router';
 import { DataManagerService } from './../data-manager.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class UserComponent implements OnInit {
-
-  passwordState = false;
+export class LoginComponent implements OnInit {
 
   constructor(public dataManagerService: DataManagerService) { }
+
+  passwordState = false;
 
   ngOnInit(): void {
   }

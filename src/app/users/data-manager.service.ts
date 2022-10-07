@@ -27,6 +27,7 @@ export class DataManagerService {
   })
 
   resetPasswordForm: FormGroup = new FormGroup({
+    resetCode: new FormControl('', [Validators.required]),
     newPassword: new FormControl('', [Validators.required, Validators.minLength(8)]),
     confirmPassword: new FormControl('', [Validators.required, Validators.minLength(8)])
   })
@@ -35,7 +36,7 @@ export class DataManagerService {
 
   switchBetweenLoginAndSignup(){
     this.loginSignupState = !this.loginSignupState
-    this.loginSignupState ? this.userSystemEntryType = 'register' : this.userSystemEntryType = 'login'
+    this.userSystemEntryType = this.loginSignupState ? 'register' : 'login'
     this.router.navigate([`users/auth/${this.userSystemEntryType}`])
   }
 

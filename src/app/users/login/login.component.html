@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="header">
+    <div class="brand">
+      <img src="assets/icons/logo.svg" alt="logo">
+    </div>
+    <div class="title">
+      <h1>Welcome Back</h1>
+    </div>
+  </div>
+  <div class="content">
+    <form [formGroup]="dataManagerService.loginForm">
+      <div class="form-content">
+        <mat-form-field appearance="fill" floatLabel="always" class="mat-elevation-z3">
+          <input type="text" matInput formControlName="username" placeholder="johndoe">
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="mat-elevation-z3">
+          <input [type]=" passwordState ? 'text' : 'password'" matInput formControlName="password" placeholder="password">
+          <mat-icon matSuffix (click)="togglePasswordVisibility()" *ngIf="!passwordState">visibility_off</mat-icon>
+          <mat-icon matSuffix (click)="togglePasswordVisibility()" *ngIf="passwordState">visibility</mat-icon>
+        </mat-form-field>
+       <div class="btns">
+        <button mat-raised-button ngClass="auth-btn" [routerLink]="['', 'users', 'dashboard', 'home']">LOGIN</button>
+        <button mat-raised-button ngClass="auth-btn" [routerLink]="['', 'users', 'auth', 'forgot']">FORGOT PASSWORD?</button>
+        <button mat-raised-button ngClass="transparent" [routerLink]="['', 'users', 'auth', 'signup']">SIGNUP INSTEAD?</button>
+       </div>
+      </div>
+    </form>
+  </div>
+</div>
